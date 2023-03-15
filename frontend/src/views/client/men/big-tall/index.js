@@ -1,0 +1,30 @@
+import { useState, useEffect } from 'react';
+
+import Top from './Top';
+import TakeStyleQuiz from './TakeStyleQuiz';
+import HowWorks from './HowWorks';
+import Brands from '../../components/Brands';
+import FAQs from './FAQs';
+import ReadMore from './ReadMore';
+import StyleFit from './StyleFit';
+
+const BigTall = () => {
+  const [isLoading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  return (
+    <>
+      <Top isLoading={isLoading} />
+      <TakeStyleQuiz isLoading={isLoading} />
+      <HowWorks isLoading={isLoading} />
+      <StyleFit isLoading={isLoading} />
+      <FAQs isLoading={isLoading} />
+      <ReadMore isLoading={isLoading} />
+      <Brands isLoading={isLoading} />
+    </>
+  );
+};
+
+export default BigTall;
